@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+
+<% @images.each do |image| %>
+<% if image.include? @product.product_name %>
+   <%= image_tag "Viola/#{image.split('/').last}" %>
+ <% end %>
+ <% end %>
+<p>
+  <strong>Product name:</strong>
+  <%= @product.product_name %>
+</p>
+
+<p>
+  <strong>Keywords:</strong>
+  <%= @product.keywords %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @product.description %>
+</p>
+
+<p>
+  <strong>Type of wig:</strong>
+  <%= @product.type_of_wig %>
+</p>
+
+<p>
+  <strong>Collection:</strong>
+  <%= @product.collection %>
+</p>
+
+<p>
+  <strong>Fiber:</strong>
+  <%= @product.fiber %>
+</p>
+
+<p>
+  <strong>Cap size:</strong>
+  <%= @product.cap_size %>
+</p>
+
+<p>
+  <strong>Handtied?:</strong>
+  <%= @product.handtied? %>
+</p>
+
+<p>
+  <strong>Special order?:</strong>
+  <%= @product.special_order? %>
+</p>
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>

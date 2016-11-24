@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  product_name: MyString
+  keywords: MyString
+  description: MyString
+  type_of_wig: MyString
+  collection: MyString
+  fiber: MyString
+  cap_size: MyString
+  handtied?: MyString
+  special_order?: MyString
+
+two:
+  product_name: MyString
+  keywords: MyString
+  description: MyString
+  type_of_wig: MyString
+  collection: MyString
+  fiber: MyString
+  cap_size: MyString
+  handtied?: MyString
+  special_order?: MyString

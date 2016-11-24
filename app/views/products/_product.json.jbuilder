@@ -1,0 +1,2 @@
+json.extract! product, :id, :product_name, :keywords, :description, :type_of_wig, :collection, :fiber, :cap_size, :handtied?, :special_order?, :created_at, :updated_at
+json.url product_url(product, format: :json)
