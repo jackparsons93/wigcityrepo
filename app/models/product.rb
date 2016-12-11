@@ -14,16 +14,23 @@ def self.varTest
     3
 end
 
+clearProducts=Product.all.order(:product_name)
+clearProducts.each do |product|
+  product.images=""
+  product.save!
+end
 
   productString=String.new
-
+  
 
 
     @@products=Product.all.order(:product_name)
     @@images = Dir.glob("app/assets/images/*/*")
     @@images.each do |image| 
     @@products.each do |product| 
+
     if image.include? product.product_name.gsub(/\s/,'_')
+
     product.images= product.images+("Wigs/#{image}")
     product.save!
     
