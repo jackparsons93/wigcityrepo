@@ -3,7 +3,7 @@
 
 <% @images.each do |image| %>
 <% if image.include? @product.product_name %>
-   <%= image_tag "Viola/#{image.split('/').last}" %>
+   <%= image_tag "Wigs/#{image.split('/').last}" , size: "100x100" %>
  <% end %>
  <% end %>
 <p>

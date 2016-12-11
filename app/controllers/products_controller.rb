@@ -4,7 +4,7 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    @products = Product.all.order(:keywords)
    
   end
   
@@ -74,6 +74,7 @@ end
     def set_product
       @product = Product.find(params[:id])
       @images = Dir.glob("app/assets/images/*/*")
+      
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
