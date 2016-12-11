@@ -1,10 +1,12 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
+  attr_accessor :varTest
 
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all.order(:keywords)
+    @products = Product.all.order(:product_name)
+      @varTest= Product.varTest
    
   end
   
@@ -17,13 +19,9 @@ end
   # GET /products/1
   # GET /products/1.json
   def show
-    @x=[]
-    @images = Dir.glob("app/assets/images/*/*")
-    @images.each do |image| 
- if image.include? @product.product_name 
-    @x.append("Wigs/#{image.split('/').last}") 
-  end 
-  end 
+    
+   
+  
     
   end
 

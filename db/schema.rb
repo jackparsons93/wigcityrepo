@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161126134601) do
+ActiveRecord::Schema.define(version: 20161211024747) do
 
   create_table "carts", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -38,8 +38,9 @@ ActiveRecord::Schema.define(version: 20161126134601) do
     t.string   "cap_size"
     t.string   "handtied?"
     t.string   "special_order?"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.text     "images",         default: "--- []\n"
   end
 
 end

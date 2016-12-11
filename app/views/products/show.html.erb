@@ -6,14 +6,22 @@
    <%#=  image_tag "Wigs/#{image.split('/').last}" , size: "100x100" %>
  <%# end %>
  <%# end %>
- <%  @x.each do |x|  %>
- <%=   image_tag x , size: "100x100"%>
- <% end %>
+ <%# @x block adds each image to the the product as matched in the controller %>
+ <%#  @product.images.each do |x|  %>
+ <%# =   image_tag x , size: "100x100"%>
+ <%# end %>
  <%# = image_tag @x %>
 <p>
   <strong>Product name:</strong>
   <%= @product.product_name %>
 </p>
+<%= @product.images  %>
+<%= @product.product_name.gsub(/\s/,'_')%>
+<%# = @product.product_name.gsub(/[ ]/,'_') %>
+<%# @product.images.each do |x| %>
+<%#= x %>
+<%# end %>
+
 
 <p>
   <strong>Keywords:</strong>
