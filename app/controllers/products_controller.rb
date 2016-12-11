@@ -17,6 +17,13 @@ end
   # GET /products/1
   # GET /products/1.json
   def show
+    @x=[]
+    @images = Dir.glob("app/assets/images/*/*")
+    @images.each do |image| 
+ if image.include? @product.product_name 
+    @x.append("Wigs/#{image.split('/').last}") 
+  end 
+  end 
     
   end
 
@@ -73,7 +80,7 @@ end
     # Use callbacks to share common setup or constraints between actions.
     def set_product
       @product = Product.find(params[:id])
-      @images = Dir.glob("app/assets/images/*/*")
+      
       
     end
 

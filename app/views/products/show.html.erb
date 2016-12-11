@@ -1,11 +1,15 @@
 <p id="notice"><%= notice %></p>
 
 
-<% @images.each do |image| %>
-<% if image.include? @product.product_name %>
-   <%= image_tag "Wigs/#{image.split('/').last}" , size: "100x100" %>
+<%#@images.each do |image| %>
+<%#if image.include? @product.product_name %>
+   <%#=  image_tag "Wigs/#{image.split('/').last}" , size: "100x100" %>
+ <%# end %>
+ <%# end %>
+ <%  @x.each do |x|  %>
+ <%=   image_tag x , size: "100x100"%>
  <% end %>
- <% end %>
+ <%# = image_tag @x %>
 <p>
   <strong>Product name:</strong>
   <%= @product.product_name %>
